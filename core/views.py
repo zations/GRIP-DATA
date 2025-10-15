@@ -65,6 +65,7 @@ def add_note(request):
 
 from .models import UserProfile
 
+@login_required
 def dashboard(request):
-    profile = request.user.profile  # ❌ unsafe – may not exist
-    return render(request, "core/dashboard.html", {"profile": profile})
+    profile, _created = UserProfile.objects.get_or_create(user=request.user)
+    return render(request, "core/dashboard.html", {"bio": profile.bio})
