@@ -62,3 +62,9 @@ def add_note(request):
     else:
         form = NoteForm()
     return render(request, "core/add_note.html", {"form": form})
+
+from .models import UserProfile
+
+def dashboard(request):
+    profile = request.user.profile  # ❌ unsafe – may not exist
+    return render(request, "core/dashboard.html", {"profile": profile})
