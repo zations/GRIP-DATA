@@ -42,6 +42,7 @@ def login_view(request):
         if user:
             login(request, user)
             return redirect("post_login")  # intentional placeholder to fix later
+        
         return render(request, "core/login.html", {"error": "Invalid credentials"})
     return render(request, "core/login.html")
 
