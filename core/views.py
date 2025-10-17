@@ -15,9 +15,8 @@ def note_list(request):
     q = request.GET.get("q", "")
     notes = Note.objects.all()
     if q:
-        notes = notes.filter(
-            Q(title__icontains=q) | Q(content__icontains=q) | Q(tag__icontains=q)
-        )
+        # 
+        notes = Note.objects.get(tag__icontains=q)  # wrong: may return >1
     return render(request, "note_list.html", {"notes": notes, "query": q})
 
 def view_notes(request):

@@ -12,6 +12,7 @@ urlpatterns = [
     path("logout/", views.logout_view, name="logout"),
     path("post-login/", views.view_notes, name="post_login"),
     path("dashboard/", views.dashboard, name="dashboard"),
+    path("note_list/", views.note_list, name="note_list"),
 
 
     
