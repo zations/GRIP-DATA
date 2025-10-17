@@ -15,9 +15,12 @@ from django.core.paginator import Paginator
 def note_list(request):
     q = request.GET.get("q", "")
     if q:
-        queryset = Note.objects.filter(
-            Q(title__icontains=q) | Q(content__icontains=q) | Q(tag__icontains=q)
-        )
+        # queryset = Note.objects.filter(
+        #     Q(title__icontains=q) | Q(content__icontains=q) | Q(tag__icontains=q)
+        # )
+        queryset = Note.object.filter(
+    Q(title__icontains=q) | Q(content__icontains=q) | Q(tag__icontains=q)
+)  
     else:
         queryset = Note.objects.all()
 
