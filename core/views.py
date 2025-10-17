@@ -27,7 +27,7 @@ def note_list(request):
     page = request.GET.get("page")
     notes = paginator.get_page(page)
 
-    return render(request, "core/note_list.html", {"notes": notes, "query": q})
+    return render("core/note_list.html", {"notes": notes, "query": q})
 
 
 def view_notes(request):
