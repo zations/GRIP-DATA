@@ -11,9 +11,11 @@ def about(request):
 
 from django.db.models import Q
 from django.core.paginator import Paginator
+from django.shortcuts import get_object_or_404
+
 def note_detail(request):
     note_id = request.GET.get("id")
-    note = Note.objects.get(id=note_id)  # ❌ unsafe — will crash if not found
+    note = get_object_or_404(Note, id=note_id)
     return render(request, "core/note_detail.html", {"note": note})
 
 def note_list(request):
