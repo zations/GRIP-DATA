@@ -1,11 +1,18 @@
 from django.db import models
+from django.db.models import Q
 
+class NoteQuerySet(models.QuerySet):
+    def search(self, q):
+        return self.filter(
+            Q(title__icontains=q) | Q(content__icontains=q) | Q(tag__icontains=q)
+        )
 class Note(models.Model):
     title = models.CharField(max_length=100)
     content = models.TextField()
     tag = models.CharField(max_length=50, null=False, blank=False)  # tighten constraint
 
     created_at = models.DateTimeField(auto_now_add=True)
+    objects = NoteQuerySet.as_manager()   # ✅ fixed manager and added helper
 
     def __str__(self):
         return self.title

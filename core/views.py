@@ -18,9 +18,8 @@ def note_list(request):
         # queryset = Note.objects.filter(
         #     Q(title__icontains=q) | Q(content__icontains=q) | Q(tag__icontains=q)
         # )
-        queryset = Note.object.filter(
-    Q(title__icontains=q) | Q(content__icontains=q) | Q(tag__icontains=q)
-)  
+        queryset = Note.objects.search(q)
+
     else:
         queryset = Note.objects.all()
 
