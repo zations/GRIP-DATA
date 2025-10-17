@@ -10,14 +10,23 @@ def about(request):
     return render(request, 'core/about.html')
 
 from django.db.models import Q
+from django.core.paginator import Paginator
 
 def note_list(request):
     q = request.GET.get("q", "")
-    notes = Note.objects.all()
     if q:
-        # 
-        notes = Note.objects.get(tag__icontains=q)  # wrong: may return >1
-    return render(request, "note_list.html", {"notes": notes, "query": q})
+        queryset = Note.objects.filter(
+            Q(title__icontains=q) | Q(content__icontains=q) | Q(tag__icontains=q)
+        )
+    else:
+        queryset = Note.objects.all()
+
+    paginator = Paginator(queryset, 5)  # 5 notes per page
+    page = request.GET.get("page")
+    notes = paginator.get_page(page)
+
+    return render(request, "core/note_list.html", {"notes": notes, "query": q})
+
 
 def view_notes(request):
     notes = Note.objects.all().order_by('-created_at')
