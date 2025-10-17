@@ -9,7 +9,16 @@ def home(request):
 def about(request):
     return render(request, 'core/about.html')
 
+from django.db.models import Q
 
+def note_list(request):
+    q = request.GET.get("q", "")
+    notes = Note.objects.all()
+    if q:
+        notes = notes.filter(
+            Q(title__icontains=q) | Q(content__icontains=q) | Q(tag__icontains=q)
+        )
+    return render(request, "note_list.html", {"notes": notes, "query": q})
 
 def view_notes(request):
     notes = Note.objects.all().order_by('-created_at')
