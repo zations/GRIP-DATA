@@ -13,7 +13,10 @@ class Note(models.Model):
 
     created_at = models.DateTimeField(auto_now_add=True)
     objects = NoteQuerySet.as_manager()   # ✅ fixed manager and added helper
-
+    
+    class Meta:
+        ordering = ["-created_at"]                # newest notes first
+        indexes = [models.Index(fields=["tag"])]  # speeds up tag-based queries
     def __str__(self):
         return self.title
 
