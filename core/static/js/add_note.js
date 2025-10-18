@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded",()=>{
   const csrftoken=getCookie("csrftoken");
   form.addEventListener("submit",async e=>{
     e.preventDefault();
-    const res=await fetch("/api/notes", {...}),{
+    const res=await fetch(noteApiUrl, {...});,{
       method:"POST",
       headers:{"X-CSRFToken":csrftoken},
       body:new FormData(form)
