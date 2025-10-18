@@ -110,5 +110,5 @@ from django.contrib.auth.decorators import login_required
 
 @login_required
 def dashboard(request):
-    data = Note.objects.values("tag").annotate(count=Count("id")).order_by("-count")
+    data = Note.objects.values("title").annotate(count=Count("id"))
     return render(request, "core/dashboard.html", {"data": data})
