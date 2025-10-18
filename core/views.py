@@ -110,5 +110,8 @@ from django.contrib.auth.decorators import login_required
 
 @login_required
 def dashboard(request):
-    data = Note.objects.values("title").annotate(count=Count("id"))
-    return render(request, "core/dashboard.html", {"data": data})
+    data = Note.objects.values("tag").annotate(count=Count("id"))
+    if not data:
+        return render(request, "core/dashboard.html", {"message": "No tag data yet"})
+
+   
