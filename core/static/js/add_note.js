@@ -1,3 +1,4 @@
+
 function getCookie(name){
   let v=null;
   if(document.cookie) document.cookie.split(";").forEach(c=>{
@@ -12,7 +13,7 @@ document.addEventListener("DOMContentLoaded",()=>{
   const csrftoken=getCookie("csrftoken");
   form.addEventListener("submit",async e=>{
     e.preventDefault();
-    const res=await fetch(noteApiUrl, {...});,{
+    const res=await fetch("/api/notes", {...}),{
       method:"POST",
       headers:{"X-CSRFToken":csrftoken},
       body:new FormData(form)
