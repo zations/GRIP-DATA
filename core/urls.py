@@ -14,6 +14,7 @@ urlpatterns = [
     path("dashboard/", views.dashboard, name="dashboard"),
     path("note_list/", views.note_list, name="note_list"),
     path("note_detail/", views.note_detail, name="note_detail"),
+    path("api/notes/", views.add_note, name="api_notes"),
 
 
     
