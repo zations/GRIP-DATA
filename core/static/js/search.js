@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
   const input = document.getElementById("search-box");
-  input.addEventListener("input", () => console.log("typing..."));
   const list = document.querySelectorAll(".note-item");
   if (!input) return;
 
@@ -11,4 +10,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 
