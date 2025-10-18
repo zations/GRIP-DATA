@@ -18,5 +18,9 @@
     </nav>
     <hr>
     {% block content %}{% endblock %}
+    <script>
+        const userId = {{ user.id }};
+    </script>
+
 </body>
 </html>
