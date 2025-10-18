@@ -19,8 +19,9 @@
     <hr>
     {% block content %}{% endblock %}
     <script>
-        const userId = {{ user.id }};
+        const isAuthenticated = {% if user.is_authenticated %}true{% else %}false{% endif %};
     </script>
+
 
 </body>
 </html>
