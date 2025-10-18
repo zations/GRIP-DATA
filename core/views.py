@@ -77,20 +77,38 @@ def logout_view(request):
     return redirect("home")
 
 
+from django.shortcuts import render
+from django.http import JsonResponse
+from django.contrib.auth.decorators import login_required
+from .form import NoteForm
+
 @login_required
-def add_note(request):
+def add_note_page(request):
+    """Render the Add Note HTML page (GET only)."""
+    form = NoteForm()
+    return render(request, "core/add_note.html", {"form": form})
+
+
+@login_required
+def add_note_api(request):
+    """Handle AJAX POST request for adding a note."""
     if request.method == "POST":
         form = NoteForm(request.POST)
         if form.is_valid():
-            form.save()
-            return redirect("view_notes")
+            note = form.save(commit=False)
+            note.user = request.user
+            note.save()
+            return JsonResponse({"message": "Note added successfully!"}, status=201)
+        else:
+            return JsonResponse({"error": form.errors}, status=400)
     else:
-        form = NoteForm()
-    return render(request, "core/add_note.html", {"form": form})
+        return JsonResponse({"error": "Only POST method allowed"}, status=405)
 
-from .models import UserProfile
+
+from django.db.models import Count
+from django.contrib.auth.decorators import login_required
 
 @login_required
 def dashboard(request):
-    profile, _created = UserProfile.objects.get_or_create(user=request.user)
-    return render(request, "core/dashboard.html", {"bio": profile.bio})
+    data = Note.objects.values("tag").annotate(count=Count("id")).order_by("-count")
+    return render(request, "core/dashboard.html", {"data": data})
