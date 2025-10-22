@@ -1,0 +1,19 @@
+<input type="text" id="search-box" placeholder="Search notes..." />
+<ul>
+{% for note in notes %}
+  <li class="note-item"><b>{{ note.title }}</b> - {{ note.content }}</li>
+{% endfor %}
+</ul>
+<script src="{% static 'js/search.js' %}" defer></script>
+
+{% extends 'core/base.html' %}
+{% block content %}
+<h2>All Notes</h2>
+<ul>
+{% for note in notes %}
+    <li><b>{{ note.title }}</b> - {{ note.content }} ({{ note.created_at }})</li>
+{% empty %}
+    <li>No notes found.</li>
+{% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,391 @@
+[
+  {
+    "timestamp": "2025-10-22T22:07:29.682859",
+    "stack_frames": [],
+    "error_type": "UnknownError",
+    "error_message": "Internal Server Error: /"
+  },
+  {
+    "timestamp": "2025-10-22T22:07:29.689069",
+    "stack_frames": [
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\core\\handlers\\base.py",
+        "line": 197,
+        "function": "_"
+      },
+      {
+        "file": "C:\\Users\\pavit\\programing\\GRIP\\GRIP\\core\\views.py",
+        "line": 7,
+        "function": "h"
+      },
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\shortcuts.py",
+        "line": 25,
+        "function": "r"
+      },
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\template\\loader.py",
+        "line": 61,
+        "function": "r"
+      },
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\template\\loader.py",
+        "line": 19,
+        "function": "g"
+      }
+    ],
+    "error_type": "UnknownError",
+    "error_message": "django.template.exceptions.TemplateDoesNotExist: core/homes.html"
+  },
+  {
+    "timestamp": "2025-10-22T22:17:55.301792",
+    "stack_frames": [],
+    "error_type": "UnknownError",
+    "error_message": "Internal Server Error: /add/"
+  },
+  {
+    "timestamp": "2025-10-22T22:17:55.332813",
+    "stack_frames": [
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\core\\handlers\\exception.py",
+        "line": 55,
+        "function": "i"
+      },
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\core\\handlers\\base.py",
+        "line": 197,
+        "function": "_"
+      },
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\contrib\\auth\\decorators.py",
+        "line": 59,
+        "function": "_"
+      },
+      {
+        "file": "C:\\Users\\pavit\\programing\\GRIP\\GRIP\\core\\views.py",
+        "line": 88,
+        "function": "a"
+      },
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\forms\\models.py",
+        "line": 362,
+        "function": "_"
+      }
+    ],
+    "error_type": "ValueError",
+    "error_message": "ModelForm has no model class specified."
+  },
+  {
+    "timestamp": "2025-10-22T22:49:35.691229",
+    "stack_frames": [],
+    "error_type": "UnknownError",
+    "error_message": "Internal Server Error: /notes/"
+  },
+  {
+    "timestamp": "2025-10-22T22:49:35.712746",
+    "stack_frames": [
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\template\\base.py",
+        "line": 510,
+        "function": "p"
+      }
+    ],
+    "error_type": "KeyError",
+    "error_message": "'static'"
+  },
+  {
+    "timestamp": "2025-10-22T22:49:35.736880",
+    "stack_frames": [
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\template\\engine.py",
+        "line": 159,
+        "function": "f"
+      },
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\template\\loaders\\cached.py",
+        "line": 57,
+        "function": "g"
+      },
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\template\\loaders\\base.py",
+        "line": 28,
+        "function": "g"
+      },
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\template\\base.py",
+        "line": 154,
+        "function": "_"
+      },
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\template\\base.py",
+        "line": 196,
+        "function": "c"
+      },
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\template\\base.py",
+        "line": 512,
+        "function": "p"
+      },
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\template\\base.py",
+        "line": 577,
+        "function": "i"
+      }
+    ],
+    "error_type": "TemplateSyntaxError",
+    "error_message": "Invalid block tag on line 7: 'static'. Did you forget to register or load this tag?"
+  },
+  {
+    "timestamp": "2025-10-22T22:52:57.965402",
+    "stack_frames": [],
+    "error_type": "UnknownError",
+    "error_message": "Internal Server Error: /add/"
+  },
+  {
+    "timestamp": "2025-10-22T22:52:57.971661",
+    "stack_frames": [
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\core\\handlers\\exception.py",
+        "line": 55,
+        "function": "i"
+      },
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\core\\handlers\\base.py",
+        "line": 197,
+        "function": "_"
+      },
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\contrib\\auth\\decorators.py",
+        "line": 59,
+        "function": "_"
+      },
+      {
+        "file": "C:\\Users\\pavit\\programing\\GRIP\\GRIP\\core\\views.py",
+        "line": 88,
+        "function": "a"
+      },
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\forms\\models.py",
+        "line": 362,
+        "function": "_"
+      }
+    ],
+    "error_type": "ValueError",
+    "error_message": "ModelForm has no model class specified.",
+    "origin_trace": {
+      "symbol": "NoteForm",
+      "defined_in": "Unknown",
+      "definition_line": null
+    }
+  },
+  {
+    "timestamp": "2025-10-23T00:35:38.199699",
+    "stack_frames": [],
+    "error_type": "UnknownError",
+    "error_message": "Internal Server Error: /add/"
+  },
+  {
+    "timestamp": "2025-10-23T00:35:38.204435",
+    "stack_frames": [
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\core\\handlers\\base.py",
+        "line": 197,
+        "function": "_"
+      },
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\contrib\\auth\\decorators.py",
+        "line": 59,
+        "function": "_"
+      },
+      {
+        "file": "C:\\Users\\pavit\\programing\\GRIP\\GRIP\\core\\views.py",
+        "line": 88,
+        "function": "a"
+      },
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\forms\\models.py",
+        "line": 362,
+        "function": "_"
+      }
+    ],
+    "error_type": "ValueError",
+    "error_message": "ModelForm has no model class specified.",
+    "origin_trace": {
+      "symbol": "NoteForm",
+      "defined_in": "Unknown",
+      "definition_line": null
+    }
+  },
+  {
+    "timestamp": "2025-10-23T00:35:38.244834",
+    "stack_frames": [
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\core\\handlers\\exception.py",
+        "line": 55,
+        "function": "i"
+      },
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\core\\handlers\\base.py",
+        "line": 199,
+        "function": "_"
+      },
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\core\\handlers\\base.py",
+        "line": 362,
+        "function": "p"
+      },
+      {
+        "file": "C:\\Users\\pavit\\programing\\GRIP\\GRIP\\core\\middleware\\error_origin.py",
+        "line": 12,
+        "function": "p"
+      },
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\encodings\\cp1252.py",
+        "line": 19,
+        "function": "e"
+      }
+    ],
+    "error_type": "UnicodeEncodeError",
+    "error_message": "'charmap' codec can't encode character '\\U0001f6a8' in position 0: character maps to <undefined>"
+  },
+  {
+    "timestamp": "2025-10-23T00:44:57.057137",
+    "stack_frames": [],
+    "error_type": "UnknownError",
+    "error_message": "Internal Server Error: /add/"
+  },
+  {
+    "timestamp": "2025-10-23T00:44:57.063728",
+    "stack_frames": [
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\core\\handlers\\base.py",
+        "line": 197,
+        "function": "_"
+      },
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\contrib\\auth\\decorators.py",
+        "line": 59,
+        "function": "_"
+      },
+      {
+        "file": "C:\\Users\\pavit\\programing\\GRIP\\GRIP\\core\\views.py",
+        "line": 88,
+        "function": "a"
+      },
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\forms\\models.py",
+        "line": 362,
+        "function": "_"
+      }
+    ],
+    "error_type": "ValueError",
+    "error_message": "ModelForm has no model class specified.",
+    "origin_trace": {
+      "symbol": "NoteForm",
+      "defined_in": "Unknown",
+      "definition_line": null
+    }
+  },
+  {
+    "timestamp": "2025-10-23T00:44:57.102711",
+    "stack_frames": [
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\core\\handlers\\exception.py",
+        "line": 55,
+        "function": "i"
+      },
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\core\\handlers\\base.py",
+        "line": 199,
+        "function": "_"
+      },
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\core\\handlers\\base.py",
+        "line": 362,
+        "function": "p"
+      },
+      {
+        "file": "C:\\Users\\pavit\\programing\\GRIP\\GRIP\\core\\middleware\\error_origin.py",
+        "line": 12,
+        "function": "p"
+      },
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\encodings\\cp1252.py",
+        "line": 19,
+        "function": "e"
+      }
+    ],
+    "error_type": "UnicodeEncodeError",
+    "error_message": "'charmap' codec can't encode character '\\U0001f6a8' in position 0: character maps to <undefined>"
+  },
+  {
+    "timestamp": "2025-10-23T00:44:58.299941",
+    "stack_frames": [],
+    "error_type": "UnknownError",
+    "error_message": "Internal Server Error: /add/"
+  },
+  {
+    "timestamp": "2025-10-23T00:44:58.303517",
+    "stack_frames": [
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\core\\handlers\\base.py",
+        "line": 197,
+        "function": "_"
+      },
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\contrib\\auth\\decorators.py",
+        "line": 59,
+        "function": "_"
+      },
+      {
+        "file": "C:\\Users\\pavit\\programing\\GRIP\\GRIP\\core\\views.py",
+        "line": 88,
+        "function": "a"
+      },
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\forms\\models.py",
+        "line": 362,
+        "function": "_"
+      }
+    ],
+    "error_type": "ValueError",
+    "error_message": "ModelForm has no model class specified.",
+    "origin_trace": {
+      "symbol": "NoteForm",
+      "defined_in": "Unknown",
+      "definition_line": null
+    }
+  },
+  {
+    "timestamp": "2025-10-23T00:44:58.323406",
+    "stack_frames": [
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\core\\handlers\\exception.py",
+        "line": 55,
+        "function": "i"
+      },
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\core\\handlers\\base.py",
+        "line": 199,
+        "function": "_"
+      },
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\site-packages\\django\\core\\handlers\\base.py",
+        "line": 362,
+        "function": "p"
+      },
+      {
+        "file": "C:\\Users\\pavit\\programing\\GRIP\\GRIP\\core\\middleware\\error_origin.py",
+        "line": 12,
+        "function": "p"
+      },
+      {
+        "file": "C:\\Users\\pavit\\miniconda3\\envs\\grip\\lib\\encodings\\cp1252.py",
+        "line": 19,
+        "function": "e"
+      }
+    ],
+    "error_type": "UnicodeEncodeError",
+    "error_message": "'charmap' codec can't encode character '\\U0001f6a8' in position 0: character maps to <undefined>"
+  }
+]

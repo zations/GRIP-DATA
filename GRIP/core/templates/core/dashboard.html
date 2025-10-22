@@ -1,0 +1,12 @@
+{% extends 'core/base.html' %}
+{% block content %}
+<h2>Dashboard</h2>
+<ul>
+{% for row in data %}
+  <li>{{ row.tag }} : {{ row.count }}</li>
+{% empty %}
+  <li>No notes yet.</li>
+{% endfor %}
+</ul>
+{% endblock %}
+

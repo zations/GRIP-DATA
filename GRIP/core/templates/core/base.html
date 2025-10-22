@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GRIP Notes</title>
+</head>
+<body>
+    
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+
+    <h1>GRIP Notes App</h1>
+    <nav>
+        <a href="/">Home</a> |
+        <a href="/about/">About</a> |
+        <a href="/add/">Add Note</a> |
+        <a href="/notes/">View Notes</a>
+        <a href="/dashboard/">view dashboard</a>
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+    <script>
+        const isAuthenticated = {% if user.is_authenticated %}true{% else %}false{% endif %};
+    </script>
+
+
+</body>
+</html>
