@@ -1,0 +1,13 @@
+{
+    "return_code": 2,
+    "ran": [
+        "python",
+        "git_indexer.py"
+    ],
+    "cwd": "C:\\Users\\pavit\\programing\\GRIP",
+    "parsed": {
+        "status": "no_error",
+        "message": "No fatal or traceback errors detected."
+    },
+    "raw": "python: can't open file 'C:\\\\Users\\\\pavit\\\\programing\\\\GRIP\\\\git_indexer.py': [Errno 2] No such file or directory\n"
+}

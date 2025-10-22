@@ -1,0 +1,46 @@
+[
+  {
+    "timestamp": "2025-10-22T21:29:40.242553",
+    "stack_frames": [
+      {
+        "file": "C:\\Users\\pavit\\programing\\GRIP\\error_demo.py",
+        "line": 11,
+        "function": "<"
+      },
+      {
+        "file": "C:\\Users\\pavit\\programing\\GRIP\\error_demo.py",
+        "line": 7,
+        "function": "m"
+      },
+      {
+        "file": "C:\\Users\\pavit\\programing\\GRIP\\error_demo.py",
+        "line": 3,
+        "function": "d"
+      }
+    ],
+    "error_type": "ZeroDivisionError",
+    "error_message": "division by zero"
+  },
+  {
+    "timestamp": "2025-10-22T21:29:47.480638",
+    "stack_frames": [
+      {
+        "file": "C:\\Users\\pavit\\programing\\GRIP\\error_demo.py",
+        "line": 11,
+        "function": "<"
+      },
+      {
+        "file": "C:\\Users\\pavit\\programing\\GRIP\\error_demo.py",
+        "line": 7,
+        "function": "m"
+      },
+      {
+        "file": "C:\\Users\\pavit\\programing\\GRIP\\error_demo.py",
+        "line": 3,
+        "function": "d"
+      }
+    ],
+    "error_type": "ZeroDivisionError",
+    "error_message": "division by zero"
+  }
+]

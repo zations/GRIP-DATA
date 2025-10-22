@@ -1,0 +1,440 @@
+[
+  {
+    "commit_hash": "c051b78c7ba21d768c1eda975845d57f04f2d8c6",
+    "author": "Abhinav-AR38",
+    "timestamp": "2025-10-18T20:58:26",
+    "message": "(error) regression(dashboard): incorrect aggregation field / count property misuse\n\nVisible: wrong grouping or missing counts\n\nRoot cause: aggregated on wrong field.",
+    "category": "other",
+    "files": [
+      "core/views.py"
+    ]
+  },
+  {
+    "commit_hash": "132577b77db1ed0a4b205fb17088e4a8bbe1b665",
+    "author": "zations",
+    "timestamp": "2025-10-16T00:50:50",
+    "message": "(fix) fix(auth): added get_or_create for Profile to ensure existence before render\n\nVisible: Dashboard loads fine even for new users.\n\nReason: Added guard + post_save signal to auto-create profiles.",
+    "category": "other",
+    "files": [
+      "core/views.py"
+    ]
+  },
+  {
+    "commit_hash": "9b773b06102c14843992c393c241dbf3aeef43b1",
+    "author": "Abhinav-AR38",
+    "timestamp": "2025-10-18T18:55:48",
+    "message": "(error) regression(api): endpoint mismatch between client and server\n\nVisible: 301 redirect when missing trailing slash\n\nRoot cause: /api/notes vs /api/notes/ mismatch.",
+    "category": "other",
+    "files": [
+      "core/static/js/add_note.js"
+    ]
+  },
+  {
+    "commit_hash": "e7ae93993860a7597ba020a57e055497e3a62060",
+    "author": "Abhinav-AR38",
+    "timestamp": "2025-10-18T18:31:03",
+    "message": "(error) regression(api): json payload without csrf/form alignment\n\nVisible: 403 Forbidden\n\nRoot cause: missing X-CSRFToken header and wrong content-type.",
+    "category": "other",
+    "files": [
+      "core/static/js/add_note.js"
+    ]
+  },
+  {
+    "commit_hash": "c0675e309e3655887d5d5669bb4b25b09ead6fdc",
+    "author": "zations",
+    "timestamp": "2025-10-20T10:25:47",
+    "message": "A sample commit for testing",
+    "category": "other",
+    "files": [
+      "sample.txt"
+    ]
+  },
+  {
+    "commit_hash": "d94d336a0385423e49b42240f8145b4a690efe33",
+    "author": "zations",
+    "timestamp": "2025-10-16T00:42:29",
+    "message": "(fix) fix(auth): updated redirect() to valid 'note_list' route and set LOGIN_REDIRECT_URL\n\nVisible: Login/signup now redirects properly to notes list.\n\nReason: Corrected route name + settings variable.",
+    "category": "other",
+    "files": [
+      "core/urls.py"
+    ]
+  },
+  {
+    "commit_hash": "ded69816872e6bdc4fd57c1fbdea1ae21c18a0c7",
+    "author": "zations",
+    "timestamp": "2025-10-15T23:34:43",
+    "message": "(feature) feat(model): add tag field to Note (nullable)",
+    "category": "other",
+    "files": [
+      "core/models.py"
+    ]
+  },
+  {
+    "commit_hash": "7dde523b20bd1b8c3255fa832b27dba1c6056155",
+    "author": "Abhinav-AR38",
+    "timestamp": "2025-10-18T18:59:17",
+    "message": "(fix) fix(api): unify endpoint with reverse in template and JS",
+    "category": "other",
+    "files": [
+      "core/static/js/add_note.js",
+      "core/templates/core/add_note.html"
+    ]
+  },
+  {
+    "commit_hash": "e4b8365ea483ded0d47390cf8fc8dcc5dd237c19",
+    "author": "Abhinav-AR38",
+    "timestamp": "2025-10-18T20:17:08",
+    "message": "(error) regression(js-template): inline variable usage without anon guard\n\nVisible: ReferenceError for undefined user.id\n\nRoot cause: template variable missing for anonymous users.",
+    "category": "other",
+    "files": [
+      "core/templates/core/base.html"
+    ]
+  },
+  {
+    "commit_hash": "bd3d93830463d4936de480a4571272eba614e228",
+    "author": "zations",
+    "timestamp": "2025-10-16T00:21:35",
+    "message": "(feature) feat(auth): add signup/login/logout and guard note creation\n\nVisible: New auth views for user registration and login.\n\nRoot cause: Previously, any user could access note creation without auth.\n\nReason: Added login_required and simple templates for authentication.",
+    "category": "other",
+    "files": [
+      "core/templates/core/login.html",
+      "core/templates/core/signup.html",
+      "core/urls.py",
+      "core/views.py"
+    ]
+  },
+  {
+    "commit_hash": "87bdf2ef2a2413bfb92b25d5b5d489fff997db57",
+    "author": "Abhinav-AR38",
+    "timestamp": "2025-10-18T20:55:24",
+    "message": "(feature) feat(dashboard): aggregate note counts by tag for charts",
+    "category": "other",
+    "files": [
+      "core/templates/core/dashboard.html",
+      "core/urls.py",
+      "core/views.py"
+    ]
+  },
+  {
+    "commit_hash": "451f4edb35a3b2e82aa8b14f11856520c7600c81",
+    "author": "zations",
+    "timestamp": "2025-10-12T14:21:51",
+    "message": "This is the folder for the GRIP test data it is made using django and basic html . It is a note's website where you can type notes and save it to view later . the folder structure is 2 main folders core has the vews.py , html templates , urls for the webpages , models.py for the databases. The GRIP folder contains the settings.py , main urls.py for the entire app or for the project.",
+    "category": "other",
+    "files": [
+      "GRIP/__init__.py",
+      "GRIP/asgi.py",
+      "GRIP/settings.py",
+      "GRIP/urls.py",
+      "GRIP/wsgi.py",
+      "core/__init__.py",
+      "core/admin.py",
+      "core/apps.py",
+      "core/form.py",
+      "core/migrations/0001_initial.py",
+      "core/migrations/__init__.py",
+      "core/models.py",
+      "core/templates/core/about.html",
+      "core/templates/core/add_note.html",
+      "core/templates/core/base.html",
+      "core/templates/core/home.html",
+      "core/templates/core/view_note.html",
+      "core/tests.py",
+      "core/urls.py",
+      "core/views.py",
+      "manage.py"
+    ]
+  },
+  {
+    "commit_hash": "cef82559eab86e7f6a994117935c00bee76ee7a1",
+    "author": "Abhinav-AR38",
+    "timestamp": "2025-10-18T19:16:46",
+    "message": "(error) regression(api): endpoint mismatch between client and server\n\nVisible: 301 redirect when missing trailing slash\n\nRoot cause: /api/notes vs /api/notes/ mismatch.",
+    "category": "other",
+    "files": [
+      "core/static/js/add_note.js"
+    ]
+  },
+  {
+    "commit_hash": "40f62ea865e884019ccd4b6b775c907904540429",
+    "author": "Vijay P",
+    "timestamp": "2025-10-17T15:16:09",
+    "message": "(feature) perf(query): added tag index and default ordering for optimized lookups",
+    "category": "other",
+    "files": [
+      "core/migrations/0006_alter_note_options_note_core_note_tag_0f934c_idx.py",
+      "core/models.py"
+    ]
+  },
+  {
+    "commit_hash": "2713fabb2aa7342d9a07a9589861dc4856aca653",
+    "author": "zations",
+    "timestamp": "2025-10-16T00:29:23",
+    "message": "(error) NoReverseMatch after signup \u2014 bad redirect 'dashboard'\n\nVisible: django.urls.exceptions.NoReverseMatch: Reverse for 'dashboard' not found\n\nRoot cause: Redirect points to undefined route in urls.py\n\nReason: Typo/invalid route name after login.",
+    "category": "other",
+    "files": [
+      "core/views.py"
+    ]
+  },
+  {
+    "commit_hash": "b3434268f8af95e740f320f41e06bbfc5a43c5b2",
+    "author": "Abhinav-AR38",
+    "timestamp": "2025-10-18T13:37:09",
+    "message": "(fix) fix(js): defer binding until DOM ready and guard element lookups",
+    "category": "other",
+    "files": [
+      "core/static/js/search.js"
+    ]
+  },
+  {
+    "commit_hash": "47f7f13cb2f83af0ac194ce7954f0d8e17b8537d",
+    "author": "zations",
+    "timestamp": "2025-10-15T23:30:43",
+    "message": "(fix) fix(forms): added clean_title() to block blank titles and show form error\n\nVisible: Form now displays 'Title cannot be empty' instead of 500 error.\n\nReason: Added server-side validation + template error display.",
+    "category": "other",
+    "files": [
+      "core/form.py"
+    ]
+  },
+  {
+    "commit_hash": "5d9f182f69b6c8a3823918b109e96cba2e9a7138",
+    "author": "Abhinav-AR38",
+    "timestamp": "2025-10-18T12:19:05",
+    "message": "(feature) feat(ui): client-side search with optional server fetch",
+    "category": "other",
+    "files": [
+      "core/static/css/js/search.js",
+      "core/templates/core/view_note.html"
+    ]
+  },
+  {
+    "commit_hash": "84106e386931654ca3423b9781c03315fbe3fcc1",
+    "author": "Vijay P",
+    "timestamp": "2025-10-17T13:24:00",
+    "message": "(error) regression(search): MultipleObjectsReturned while searching common tag\n\nVisible: django.core.exceptions.MultipleObjectsReturned in views.note_list()\n\nRoot cause: used .get() instead of .filter() on tag__icontains returning multiple rows.",
+    "category": "other",
+    "files": [
+      "core/urls.py",
+      "core/views.py"
+    ]
+  },
+  {
+    "commit_hash": "d54b59109dd0930e3aa84ca229e41a24304bd1c3",
+    "author": "Abhinav-AR38",
+    "timestamp": "2025-10-18T20:07:59",
+    "message": "(fix) fix(api): unify endpoint with reverse in template and JS",
+    "category": "other",
+    "files": [
+      "core/static/js/add_note.js",
+      "core/templates/core/add_note.html"
+    ]
+  },
+  {
+    "commit_hash": "fd56b46bbf30dccb17a5bd5aad5fe7d14cbd7dae",
+    "author": "Abhinav-AR38",
+    "timestamp": "2025-10-18T20:51:21",
+    "message": "(fix) fix(js-template): guard inline template vars for anon users",
+    "category": "other",
+    "files": [
+      "core/templates/core/base.html"
+    ]
+  },
+  {
+    "commit_hash": "b1751c11978ed0b44e8936194f7bfb908a5e17a9",
+    "author": "Vijay P",
+    "timestamp": "2025-10-17T15:03:22",
+    "message": "(error) regression(view): render() missing request argument\n\nVisible: TypeError: render() missing required positional argument 'request'\n\nRoot cause: forgot to pass request object to render() call.",
+    "category": "other",
+    "files": [
+      "core/views.py"
+    ]
+  },
+  {
+    "commit_hash": "119f996e9959316dd01803bbc3a58c47ba0e91e5",
+    "author": "Vijay P",
+    "timestamp": "2025-10-17T13:06:07",
+    "message": "(feature) feat(search): add icontains filter on title/content/tag",
+    "category": "other",
+    "files": [
+      "core/migrations/0002_note_tag.py",
+      "core/migrations/0003_alter_note_tag.py",
+      "core/migrations/0004_auto_20251015_2344.py",
+      "core/migrations/0005_userprofile.py",
+      "core/templates/core/base.html",
+      "core/views.py",
+      "requirements.txt"
+    ]
+  },
+  {
+    "commit_hash": "11264ed301826f5622fa03824afe2d3a4938d21a",
+    "author": "Abhinav-AR38",
+    "timestamp": "2025-10-18T18:54:07",
+    "message": "(fix) fix(api): add csrf header and align content-type handling",
+    "category": "other",
+    "files": [
+      "core/static/js/add_note.js"
+    ]
+  },
+  {
+    "commit_hash": "1264c64ade3a7069c1ad637cc86501754ab78541",
+    "author": "Abhinav-AR38",
+    "timestamp": "2025-10-18T12:38:58",
+    "message": "(error) regression(js): event binding executes before DOM available\n\nVisible: TypeError in console\n\nRoot cause: ran before DOM loaded.",
+    "category": "other",
+    "files": [
+      "core/static/js/search.js"
+    ]
+  },
+  {
+    "commit_hash": "75c98f337969d88f0008d393c2f284a9fa0e9fa5",
+    "author": "Vijay P",
+    "timestamp": "2025-10-17T13:37:18",
+    "message": "(fix) fix(search): switched to filter() with pagination to prevent MultipleObjectsReturned",
+    "category": "other",
+    "files": [
+      "core/templates/core/note_list.html",
+      "core/views.py"
+    ]
+  },
+  {
+    "commit_hash": "6c13c98b434bc2869cdad39a0e517af859ca8dcc",
+    "author": "Abhinav-AR38",
+    "timestamp": "2025-10-17T23:09:33",
+    "message": "(error) regression(static): incorrect STATICFILES_DIRS causes collectstatic failure\n\nVisible: ImproperlyConfigured on collectstatic\n\nRoot cause: invalid STATICFILES_DIRS path.",
+    "category": "other",
+    "files": [
+      "GRIP/settings.py"
+    ]
+  },
+  {
+    "commit_hash": "5119a9d32703eb944b91ce9dad765eef887bc1a7",
+    "author": "Vijay P",
+    "timestamp": "2025-10-17T15:10:13",
+    "message": "(fix) fix(lookup): replaced .get() with get_object_or_404 for safe retrieval",
+    "category": "other",
+    "files": [
+      "core/views.py"
+    ]
+  },
+  {
+    "commit_hash": "638b887cc08aa30049d4513a522c6e5884094b24",
+    "author": "zations",
+    "timestamp": "2025-10-15T23:07:44",
+    "message": "(error) TemplateDoesNotExist on /add_note \u2014 caused by DB IntegrityError (null title)\n\nVisible: django.template.exceptions.TemplateDoesNotExist: note_add.html\n\nRoot cause: django.db.utils.IntegrityError: NOT NULL constraint failed: core_note.title\n\nReason: Form allowed blank title while DB column is NOT NULL.",
+    "category": "other",
+    "files": [
+      "core/form.py"
+    ]
+  },
+  {
+    "commit_hash": "a678b205f3ef9cd5897ffa6d27ecd6ea07b4de9a",
+    "author": "Abhinav-AR38",
+    "timestamp": "2025-10-18T21:00:31",
+    "message": "(fix) fix(dashboard): correct aggregation and empty-state handling",
+    "category": "other",
+    "files": [
+      "core/views.py"
+    ]
+  },
+  {
+    "commit_hash": "e99ae7782be65f654a5c6e3c98c97445b498f741",
+    "author": "zations",
+    "timestamp": "2025-10-15T23:42:20",
+    "message": "(error) TemplateDoesNotExist after migrate \u2014 caused by tag field IntegrityError\n\nVisible: django.template.exceptions.TemplateDoesNotExist: note_list.html during note save.\n\nRoot cause: django.db.utils.IntegrityError: NOT NULL constraint failed: core_note.tag\n\nReason: tag made non-null before backfilling NULL rows, causing view + template failure.",
+    "category": "other",
+    "files": [
+      "core/models.py"
+    ]
+  },
+  {
+    "commit_hash": "8cdeec7731388154ce7f450235a28fc9ba5c3eab",
+    "author": "Abhinav-AR38",
+    "timestamp": "2025-10-18T13:44:01",
+    "message": "(feature) feat(api): ajax submit for note creation",
+    "category": "other",
+    "files": [
+      "core/static/js/add_note.js",
+      "core/templates/core/add_note.html",
+      "core/urls.py"
+    ]
+  },
+  {
+    "commit_hash": "6065f21959ac0c9a6d1d363eb0b63dd67edbf1cf",
+    "author": "Vijay P",
+    "timestamp": "2025-10-17T14:20:39",
+    "message": "(error) regression(orm): AttributeError 'Note' has no attribute 'object'\n\nVisible: AttributeError at /note_list/ \u2014 'Note' object has no attribute 'object'\n\nRoot cause: typo in ORM manager; should be Note.objects not Note.object.",
+    "category": "other",
+    "files": [
+      "core/views.py"
+    ]
+  },
+  {
+    "commit_hash": "cdb3bfbaa7f4b2ac6da207f73bc59174c2748f07",
+    "author": "Abhinav-AR38",
+    "timestamp": "2025-10-17T23:04:04",
+    "message": "(feature) feat(ui): add app.css and wire static in base",
+    "category": "other",
+    "files": [
+      "GRIP/settings.py",
+      "core/static/css/app.css",
+      "core/templates/core/base.html"
+    ]
+  },
+  {
+    "commit_hash": "2299046f080a43bd7b40950765f6cc7aa38de0e2",
+    "author": "Abhinav-AR38",
+    "timestamp": "2025-10-18T12:14:01",
+    "message": "(fix) fix(static): proper static configuration and doc",
+    "category": "other",
+    "files": [
+      "GRIP/settings.py",
+      "core/static/css/app.css"
+    ]
+  },
+  {
+    "commit_hash": "0305068a12ad1559b375b97621cb96f560920d85",
+    "author": "Vijay P",
+    "timestamp": "2025-10-17T15:08:17",
+    "message": "(error) regression(lookup): DoesNotExist on invalid note id\n\nVisible: core.models.Note.DoesNotExist at /note_detail/ when id not found\n\nRoot cause: used .get() without handling missing objects.",
+    "category": "other",
+    "files": [
+      "core/templates/core/note_detail.html",
+      "core/urls.py",
+      "core/views.py"
+    ]
+  },
+  {
+    "commit_hash": "dbf56edb45b86cf1b3b9ae2bd0ea7cce1424e954",
+    "author": "Vijay P",
+    "timestamp": "2025-10-17T14:39:26",
+    "message": "(fix) fix(orm): corrected manager to Note.objects and added reusable search() helper",
+    "category": "other",
+    "files": [
+      "core/models.py",
+      "core/views.py"
+    ]
+  },
+  {
+    "commit_hash": "d68c5495ee0cd845c7ad4162e9d879d60af15828",
+    "author": "zations",
+    "timestamp": "2025-10-16T00:48:29",
+    "message": "(error) RelatedObjectDoesNotExist in dashboard \u2014 missing user.profile\n\nVisible: core.models.UserProfile.DoesNotExist: UserProfile matching query does not exist.\n\nRoot cause: dashboard assumes every user has a profile but none are created automatically.\n\nReason: request.user.profile accessed before related object exists.",
+    "category": "other",
+    "files": [
+      "core/models.py",
+      "core/templates/core/dashboard.html",
+      "core/urls.py",
+      "core/views.py"
+    ]
+  },
+  {
+    "commit_hash": "dbe4617fc602f827b9c044ede48bd431de95dbb0",
+    "author": "Vijay P",
+    "timestamp": "2025-10-17T15:05:05",
+    "message": "(fix) fix(view): standardize render(request, ...) usage and add smoke test for key views",
+    "category": "other",
+    "files": [
+      "core/views.py"
+    ]
+  }
+]
